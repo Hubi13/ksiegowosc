@@ -1,25 +1,41 @@
 :root {
-    /* Colors */
-    --color-primary: #0a192f;
-    --color-primary-light: #112240;
-    --color-accent: #0d9488;
-    --color-accent-hover: #0f766e;
-    --color-accent-light: #ccfbf1;
-    --color-bg: #f8fafc;
-    --color-surface: #ffffff;
+    /* Colors - Corporate Enterprise Gateway */
+    --color-primary: #0F172A;
+    /* Slate 900 */
+    --color-primary-light: #334155;
+    /* Slate 700 */
+    --color-primary-dark: #020617;
+    /* Slate 950 */
+    --color-accent: #0369A1;
+    /* Sky 700 */
+    --color-accent-hover: #0284C7;
+    /* Sky 600 */
+    --color-accent-light: #E0F2FE;
+    /* Sky 100 */
+    --color-bg: #F8FAFC;
+    /* Slate 50 */
+    --color-surface: rgba(255, 255, 255, 0.85);
+    /* Glassmorphism */
     --color-text: #334155;
-    --color-text-dark: #0f172a;
-    --color-text-light: #94a3b8;
-    --color-border: #e2e8f0;
+    /* Slate 700 */
+    --color-text-dark: #0F172A;
+    /* Slate 900 */
+    --color-text-light: #64748B;
+    /* Slate 500 */
+    --color-border: rgba(148, 163, 184, 0.2);
 
     /* Typography */
-    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Lexend', system-ui, -apple-system, sans-serif;
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+
+    /* Effects */
+    --blur-md: blur(12px);
 
     /* Transitions */
     --transition-fast: 0.15s ease-in-out;
@@ -193,6 +209,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: var(--font-heading);
     color: var(--color-text-dark);
     font-weight: 700;
     line-height: 1.2;
@@ -388,6 +405,8 @@ p {
 
 .card {
     background-color: var(--color-surface);
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
     border-radius: var(--border-radius-lg);
     padding: 2.5rem 2rem;
     box-shadow: var(--shadow-sm);
@@ -399,6 +418,8 @@ p {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    border-color: rgba(3, 105, 161, 0.3);
+    /* subtle accent border on hover */
 }
 
 .badge {
@@ -435,11 +456,13 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--color-surface);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
     padding: 1.25rem 0;
     z-index: 1000;
     transition: all var(--transition-normal);
-    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .header.scrolled {
@@ -539,10 +562,9 @@ p {
     z-index: 2000;
     padding: 2rem;
     display: flex;
-    flex-col;
+    flex-direction: column;
     box-shadow: var(--shadow-xl);
     transition: right 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
-    flex-direction: column;
 }
 
 .mobile-menu.active {
