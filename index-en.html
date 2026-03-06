@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body>
+<body class="home-page">
 
     <!-- Header -->
     <header class="header">
@@ -76,8 +76,9 @@
         </div>
     </div>
 
+    <main class="home-main">
     <!-- Hero Section -->
-    <section class="hero bg-light">
+    <section class="hero bg-light hero-panel">
         <div class="container hero-container">
             <div class="hero-content">
                 <span class="badge" data-i18n="hero_badge">Professional Accounting Firm</span>
@@ -89,6 +90,20 @@
                     <a href="uslugi-en.html" class="btn btn-outline" data-i18n="hero_btn_2">View Services</a>
                 </div>
 
+                <div class="hero-metrics">
+                    <article class="metric-tile">
+                        <p class="metric-value">250+</p>
+                        <p class="metric-label">Active clients</p>
+                    </article>
+                    <article class="metric-tile">
+                        <p class="metric-value">60+</p>
+                        <p class="metric-label">New businesses yearly</p>
+                    </article>
+                    <article class="metric-tile">
+                        <p class="metric-value">22h</p>
+                        <p class="metric-label">Average response time</p>
+                    </article>
+                </div>
                 <div class="hero-pillars">
                     <div class="pillar">
                         <i data-lucide="check-circle-2"></i> <span data-i18n="hero_pillar_1">Timeliness</span>
@@ -103,23 +118,35 @@
             </div>
 
             <div class="hero-image">
-                <!-- Using a high quality placeholder for the accounting dashboard / business meeting aesthetic -->
-                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Nowoczesne biuro rachunkowe, dokumenty finansowe" class="rounded-image shadow-xl">
+                <div class="hero-visual-grid">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Modern accounting office and financial documents" class="hero-photo hero-photo-main rounded-image shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80"
+                        alt="Financial analysis and advisory" class="hero-photo hero-photo-side rounded-image">
 
-                <div class="floating-card popup-card-1">
-                    <div class="popup-icon bg-green"><i data-lucide="trending-up"></i></div>
-                    <div>
-                        <p class="font-bold text-dark m-0">Net Profit</p>
-                        <p class="text-sm m-0">+24% this month</p>
+                    <div class="hero-values-card card">
+                        <p class="text-sm m-0">How we work</p>
+                        <ul class="hero-values-list">
+                            <li><i data-lucide="shield-check"></i> Secure workflow</li>
+                            <li><i data-lucide="message-square"></i> Dedicated advisor</li>
+                            <li><i data-lucide="calendar-check-2"></i> Monthly reporting rhythm</li>
+                        </ul>
                     </div>
-                </div>
 
-                <div class="floating-card popup-card-2">
-                    <div class="popup-icon bg-blue"><i data-lucide="file-check"></i></div>
-                    <div>
-                        <p class="font-bold text-dark m-0">Documents</p>
-                        <p class="text-sm m-0">All accounted for</p>
+                    <div class="floating-card popup-card-1">
+                        <div class="popup-icon bg-green"><i data-lucide="trending-up"></i></div>
+                        <div>
+                            <p class="font-bold text-dark m-0">Net Profit</p>
+                            <p class="text-sm m-0">+24% this month</p>
+                        </div>
+                    </div>
+
+                    <div class="floating-card popup-card-2">
+                        <div class="popup-icon bg-blue"><i data-lucide="file-check"></i></div>
+                        <div>
+                            <p class="font-bold text-dark m-0">Documents</p>
+                            <p class="text-sm m-0">All accounted for</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -518,6 +545,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
